@@ -8,10 +8,7 @@ module HotelsHelper
       end
     end
   end
-<<<<<<< HEAD
-  
-=======
->>>>>>> c24d4d89f8788491636ad4f6b7976d5db75437f8
+
   def current_user_rating
     if @rating = current_user.ratings.find_by_hotel_id(params[:id])
       @rating.value

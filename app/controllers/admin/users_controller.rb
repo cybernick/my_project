@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-class Admin::UsersController < Admin::InheritedResources::Base
-=======
 class Admin::UsersController < Admin::AdminController
->>>>>>> c24d4d89f8788491636ad4f6b7976d5db75437f8
-  #load_and_authorize_resource
-  # GET /users
-  # GET /users.json
+
   helper_method :sort_column, :sort_direction
   def index
     @user=User.all
@@ -21,8 +15,6 @@ class Admin::UsersController < Admin::AdminController
     end
   end
 
-<<<<<<< HEAD
-=======
   def show
     @user = User.find(params[:id])
 
@@ -87,7 +79,6 @@ class Admin::UsersController < Admin::AdminController
     end
   end
 
->>>>>>> c24d4d89f8788491636ad4f6b7976d5db75437f8
   private
   def sort_column
     User.column_names.include?(params[:sort]) ? params[:sort] : "id"

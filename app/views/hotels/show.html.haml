@@ -28,11 +28,7 @@
               = hidden_field_tag("hotel_id", @hotel.id)
               = f.submit :submit!  ,class: "btn btn-large btn-primary"
     %li
-<<<<<<< HEAD
       -if @hotel.pending? && admin_signed_in?
-=======
-      -if @hotel.status == "pending" && admin_signed_in?
->>>>>>> c24d4d89f8788491636ad4f6b7976d5db75437f8
         = form_for(@hotel) do |f|
           = f.select(:status, [['Approved',"approved"],['Rejected',"rejected"]])
           = f.submit :submit  ,class: "btn btn-large btn-primary"

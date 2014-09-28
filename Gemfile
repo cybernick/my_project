@@ -19,11 +19,9 @@ gem 'jquery-rails', '~> 3.1.1'
 gem 'haml-rails'
 gem 'launchy'
 gem 'warden'
-<<<<<<< HEAD
 gem 'aasm'
 gem 'inherited_resources'
-=======
->>>>>>> c24d4d89f8788491636ad4f6b7976d5db75437f8
+
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'

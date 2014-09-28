@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140926100404) do
-=======
 ActiveRecord::Schema.define(version: 20140914081709) do
->>>>>>> c24d4d89f8788491636ad4f6b7976d5db75437f8
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -50,15 +46,9 @@ ActiveRecord::Schema.define(version: 20140914081709) do
     t.string   "state"
     t.string   "city"
     t.string   "street"
-<<<<<<< HEAD
-    t.string   "admin_id"
-    t.string   "integer"
-    t.string   "status"
-=======
     t.string   "status",           default: "pending"
     t.string   "admin_id"
     t.string   "integer"
->>>>>>> c24d4d89f8788491636ad4f6b7976d5db75437f8
   end
 
   create_table "ratings", force: true do |t|

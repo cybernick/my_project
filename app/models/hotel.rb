@@ -1,9 +1,6 @@
 require 'carrierwave/orm/activerecord'
 class Hotel < ActiveRecord::Base
-<<<<<<< HEAD
   include AASM
-=======
->>>>>>> c24d4d89f8788491636ad4f6b7976d5db75437f8
   attr_accessible :status,:title,:rating,:breakfast,:price_for_room,:country,:state,:city,:street, :room_description, :name_of_photo, :id
   belongs_to :user
   belongs_to :admin
@@ -28,9 +25,6 @@ class Hotel < ActiveRecord::Base
     '%.2f' % (@value.to_f / @total.to_f)
      update_attributes(rating:     '%.2f' % (@value.to_f / @total.to_f))
   end
-<<<<<<< HEAD
-
-
 
   aasm :column => 'status' do
     state :pending, :initial => true
@@ -45,6 +39,4 @@ class Hotel < ActiveRecord::Base
       transitions :from => :pending, :to => :rejected
     end
   end
-=======
->>>>>>> c24d4d89f8788491636ad4f6b7976d5db75437f8
 end
