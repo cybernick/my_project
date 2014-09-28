@@ -1,4 +1,4 @@
-class Admin::UsersController < Admin::AdminController
+class Admin::UsersController < Admin::AdminController!!!
 
   helper_method :sort_column, :sort_direction
   def index
