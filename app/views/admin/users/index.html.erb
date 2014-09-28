@@ -1,0 +1,45 @@
+<%= content_for(:title, 'List of Users') %>
+<h1>Users</h1>
+<%= form_tag admin_users_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search_username, params[:search_username] %>
+    <%= submit_tag "Search user", :username => nil %>
+  </p>
+  <p>
+    <%= text_field_tag :search_email, params[:search_email] %>
+    <%= submit_tag "Search email", :email => nil %>
+  </p>
+<% end %>
+<table class="table table-striped">
+ <thead>
+  <tr>
+    <th><%= sortable "id" %></th>
+    <th><%= sortable "username" %></th>
+    <th><%= sortable "number_of_hotel" %></th>
+    <th><%= sortable "number_of_comment" %></th>
+    <th><%= sortable "email" %></th>
+    <th><%= sortable "created_at" %></th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @users.each do |user| -%>
+   <tr>
+    <td><%= user.id %></td>
+    <td><%= user.username %></td>
+    <td><%= user.number_of_hotel %></td>
+    <td><%= user.number_of_comment %></td>
+    <td><%= link_to user.email, admin_user_path(user) %></td>
+    <td><%= user.created_at %></td>
+    <td>
+      <%= link_to 'Show', admin_user_path(user) %>
+      <%= link_to "Edit", edit_admin_user_path(user) %>
+      <%= link_to 'Destroy', admin_user_path(user), :method => :delete, :data =>{:confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" }%>
+    </td>
+    </tr>
+    <% end -%>
+   </tbody>
+</table>
+
+<%= link_to "New", new_admin_user_path, :class => 'btn btn-primary' %>
+<%= will_paginate @users %>

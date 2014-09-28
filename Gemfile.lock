@@ -1,0 +1,304 @@
+GIT
+  remote: git://github.com/bmabey/database_cleaner.git
+<<<<<<< HEAD
+  revision: 5d85717975107e64521e943c8cac338eff080bab
+=======
+  revision: 8d7f72ffc99befd5ce67d333a99e0cf054c24f81
+>>>>>>> c24d4d89f8788491636ad4f6b7976d5db75437f8
+  specs:
+    database_cleaner (1.3.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+<<<<<<< HEAD
+    aasm (3.4.0)
+=======
+>>>>>>> c24d4d89f8788491636ad4f6b7976d5db75437f8
+    actionmailer (4.0.2)
+      actionpack (= 4.0.2)
+      mail (~> 2.5.4)
+    actionpack (4.0.2)
+      activesupport (= 4.0.2)
+      builder (~> 3.1.0)
+      erubis (~> 2.7.0)
+      rack (~> 1.5.2)
+      rack-test (~> 0.6.2)
+    activemodel (4.0.2)
+      activesupport (= 4.0.2)
+      builder (~> 3.1.0)
+    activerecord (4.0.2)
+      activemodel (= 4.0.2)
+      activerecord-deprecated_finders (~> 1.0.2)
+      activesupport (= 4.0.2)
+      arel (~> 4.0.0)
+    activerecord-deprecated_finders (1.0.3)
+    activesupport (4.0.2)
+      i18n (~> 0.6, >= 0.6.4)
+      minitest (~> 4.2)
+      multi_json (~> 1.3)
+      thread_safe (~> 0.1)
+      tzinfo (~> 0.3.37)
+    addressable (2.3.6)
+    arel (4.0.2)
+    bcrypt-ruby (3.1.2)
+    bootstrap-sass (2.3.2.0)
+      sass (~> 3.2)
+    bootstrap-will_paginate (0.0.9)
+      will_paginate
+    builder (3.1.4)
+    capybara (2.1.0)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
+    childprocess (0.5.3)
+      ffi (~> 1.0, >= 1.0.11)
+    coffee-rails (4.0.1)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0, < 5.0)
+    coffee-script (2.3.0)
+      coffee-script-source
+      execjs
+<<<<<<< HEAD
+    coffee-script-source (1.8.0)
+    countries (0.9.3)
+      currencies (~> 0.4.2)
+    country_select (2.0.1)
+      countries (~> 0.9, >= 0.9.3)
+    cucumber (1.3.17)
+=======
+    coffee-script-source (1.7.1)
+    countries (0.9.3)
+      currencies (~> 0.4.2)
+    country_select (1.3.1)
+      countries (= 0.9.3)
+    cucumber (1.3.15)
+>>>>>>> c24d4d89f8788491636ad4f6b7976d5db75437f8
+      builder (>= 2.1.2)
+      diff-lcs (>= 1.1.3)
+      gherkin (~> 2.12)
+      multi_json (>= 1.7.5, < 2.0)
+      multi_test (>= 0.1.1)
+    cucumber-rails (1.4.0)
+      capybara (>= 1.1.2)
+      cucumber (>= 1.2.0)
+      nokogiri (>= 1.5.0)
+      rails (>= 3.0.0)
+    currencies (0.4.2)
+    devise (3.2.2)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
+    diff-lcs (1.2.5)
+    erubis (2.7.0)
+    execjs (2.2.1)
+    factory_girl (4.2.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.2.0)
+      factory_girl (~> 4.2.0)
+      railties (>= 3.0.0)
+    faker (1.1.2)
+      i18n (~> 0.5)
+<<<<<<< HEAD
+    ffi (1.9.4)
+=======
+    ffi (1.9.3)
+>>>>>>> c24d4d89f8788491636ad4f6b7976d5db75437f8
+    gherkin (2.12.2)
+      multi_json (~> 1.3)
+    haml (4.0.5)
+      tilt
+    haml-rails (0.5.3)
+      actionpack (>= 4.0.1)
+      activesupport (>= 4.0.1)
+      haml (>= 3.1, < 5.0)
+      railties (>= 4.0.1)
+<<<<<<< HEAD
+    has_scope (0.6.0.rc)
+      actionpack (>= 3.2, < 5)
+      activesupport (>= 3.2, < 5)
+    hike (1.2.3)
+    i18n (0.6.11)
+    inherited_resources (1.5.0)
+      has_scope (~> 0.6.0.rc)
+      responders (~> 1.0)
+    jbuilder (1.0.2)
+      activesupport (>= 3.0.0)
+    jquery-rails (3.1.2)
+=======
+    hike (1.2.3)
+    i18n (0.6.11)
+    jbuilder (1.0.2)
+      activesupport (>= 3.0.0)
+    jquery-rails (3.1.1)
+>>>>>>> c24d4d89f8788491636ad4f6b7976d5db75437f8
+      railties (>= 3.0, < 5.0)
+      thor (>= 0.14, < 2.0)
+    jquery-ui-rails (5.0.0)
+      railties (>= 3.2.16)
+    json (1.8.1)
+    launchy (2.4.2)
+      addressable (~> 2.3)
+    mail (2.5.4)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    mime-types (1.25.1)
+    mini_portile (0.6.0)
+    minitest (4.7.5)
+    multi_json (1.10.1)
+    multi_test (0.1.1)
+    nokogiri (1.6.3.1)
+      mini_portile (= 0.6.0)
+    orm_adapter (0.5.0)
+    pg (0.15.1)
+    polyglot (0.3.5)
+    protected_attributes (1.0.8)
+      activemodel (>= 4.0.1, < 5.0)
+    rack (1.5.2)
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    rails (4.0.2)
+      actionmailer (= 4.0.2)
+      actionpack (= 4.0.2)
+      activerecord (= 4.0.2)
+      activesupport (= 4.0.2)
+      bundler (>= 1.3.0, < 2.0)
+      railties (= 4.0.2)
+      sprockets-rails (~> 2.0.0)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.2)
+    rails_stdout_logging (0.0.3)
+    railties (4.0.2)
+      actionpack (= 4.0.2)
+      activesupport (= 4.0.2)
+      rake (>= 0.8.7)
+      thor (>= 0.18.1, < 2.0)
+    rake (10.3.2)
+    rdoc (3.12.2)
+      json (~> 1.4)
+<<<<<<< HEAD
+    responders (1.1.1)
+      railties (>= 3.2, < 4.2)
+    rmagick (2.13.2)
+    rmagick (2.13.3)
+=======
+    rmagick (2.13.2)
+>>>>>>> c24d4d89f8788491636ad4f6b7976d5db75437f8
+    rspec-core (2.14.8)
+    rspec-expectations (2.14.5)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.14.6)
+    rspec-rails (2.14.1)
+      actionpack (>= 3.0)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 2.14.0)
+      rspec-expectations (~> 2.14.0)
+      rspec-mocks (~> 2.14.0)
+    rubyzip (0.9.9)
+    sass (3.2.19)
+    sass-rails (4.0.3)
+      railties (>= 4.0.0, < 5.0)
+      sass (~> 3.2.0)
+      sprockets (~> 2.8, <= 2.11.0)
+      sprockets-rails (~> 2.0)
+    sdoc (0.3.20)
+      json (>= 1.1.3)
+      rdoc (~> 3.10)
+    selenium-webdriver (2.35.1)
+      childprocess (>= 0.2.5)
+      multi_json (~> 1.0)
+      rubyzip (< 1.0.0)
+      websocket (~> 1.0.4)
+    simple_form (3.0.2)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
+    sprockets (2.11.0)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    sprockets-rails (2.0.1)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      sprockets (~> 2.8)
+    sqlite3 (1.3.8)
+    thor (0.19.1)
+    thread_safe (0.3.4)
+    tilt (1.4.1)
+    treetop (1.4.15)
+      polyglot
+      polyglot (>= 0.3.1)
+    turbolinks (1.1.1)
+      coffee-rails
+<<<<<<< HEAD
+    tzinfo (0.3.41)
+=======
+    tzinfo (0.3.40)
+>>>>>>> c24d4d89f8788491636ad4f6b7976d5db75437f8
+    uglifier (2.1.1)
+      execjs (>= 0.3.0)
+      multi_json (~> 1.0, >= 1.0.2)
+    warden (1.2.3)
+      rack (>= 1.0)
+    websocket (1.0.7)
+    will_paginate (3.0.4)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+<<<<<<< HEAD
+  aasm
+=======
+>>>>>>> c24d4d89f8788491636ad4f6b7976d5db75437f8
+  bcrypt-ruby (= 3.1.2)
+  bootstrap-sass (= 2.3.2.0)
+  bootstrap-will_paginate (= 0.0.9)
+  capybara (= 2.1.0)
+  carrierwave
+  coffee-rails (= 4.0.1)
+  country_select
+  cucumber-rails (= 1.4.0)
+  database_cleaner!
+  devise (= 3.2.2)
+  factory_girl_rails (= 4.2.0)
+  faker (= 1.1.2)
+  haml-rails
+<<<<<<< HEAD
+  inherited_resources
+=======
+>>>>>>> c24d4d89f8788491636ad4f6b7976d5db75437f8
+  jbuilder (= 1.0.2)
+  jquery-rails (~> 3.1.1)
+  jquery-ui-rails (~> 5.0.0)
+  launchy
+  pg (= 0.15.1)
+  protected_attributes
+  rails (= 4.0.2)
+  rails_12factor (= 0.0.2)
+  rmagick
+  rspec-rails (= 2.14.1)
+  sass-rails (~> 4.0.2)
+  sdoc (= 0.3.20)
+  selenium-webdriver (= 2.35.1)
+  simple_form
+  sqlite3 (= 1.3.8)
+  turbolinks (= 1.1.1)
+  uglifier (= 2.1.1)
+  warden
+  will_paginate (= 3.0.4)

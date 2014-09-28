@@ -1,0 +1,53 @@
+%h1= @hotel.title
+= image_tag(@hotel.name_of_photo.url, :height => '259', :width => '194', class: 'img')
+%li
+	-if hotel.status == "approved"
+		Status:
+		%span.label.label-success 
+			%p
+				Approved
+	-else
+		-if hotel.status == "pending"
+			Status:
+			%span.label.label-warning
+				%p
+					Pending
+		-else 
+			Status:
+			%span.label.label-important
+				%p
+					Rejected
+%li
+	%p
+		Breakfast:
+		= human_boolean(@hotel.breakfast)
+%li
+	%p
+		Price for room:
+		= @hotel.price_for_room.to_s + " USD"   
+%li 
+	%p
+		Room description:
+		= @hotel.room_description
+%li
+	%p 
+		Country:
+		= @hotel.country
+%li
+	%p 
+		State:
+		= @hotel.state
+%li
+	%p 
+		City:
+		= @hotel.city
+%li
+	%p 
+		Street:
+		= @hotel.street
+%li
+	%table#rating
+	%thead
+		%tr
+			%td Average Rating
+			%td= @hotel.rating

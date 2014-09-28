@@ -1,0 +1,50 @@
+- content_for(:title, 'List of Hotels')
+%h1 List of Hotels
+-if admin_signed_in?
+	%div.text-center		
+		=link_to "Pending", {:status => "pending"} , class: "btn btn-large btn-warning"
+		=link_to "Approved ", {:status => "approved"} , class: "btn btn-large btn-success"
+		=link_to "Rejected", {:status => "rejected"} , class: "btn btn-large btn-danger"
+%ul.hotels
+	- @hotels.each do |hotel| 
+		%ul
+			%li 
+				=image_tag hotel.name_of_photo.url
+				%p
+					Title: 
+					= hotel.title
+			%li
+				-if hotel.status == "approved"
+					Status:
+					%span.label.label-success 
+						%p
+							Approved
+				-else
+					-if hotel.status == "pending"
+						Status:
+						%span.label.label-warning
+							%p
+								Pending
+					-else 
+						Status:
+						%span.label.label-important
+							%p
+								Rejected
+			%li
+				%p
+					Rating:
+					= hotel.rating
+			%li 
+				%p
+					Room description:
+					= hotel.room_description
+			%li
+				= link_to 'details', hotel,class: "btn btn-large btn-primary"
+				- if current_user!=nil
+					- if current_user.id==hotel.user_id
+						= link_to 'delete', hotel, method: :delete,  data: { confirm: "You sure?" },title: hotel.title,class: "btn btn-large btn-danger"
+-if !@hotels.empty?		
+	= will_paginate	@hotels
+%p				
+	%div.text-center
+		= link_to 'Add Hotel', hotels_new_path , class: "btn btn-large btn-primary"

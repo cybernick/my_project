@@ -1,0 +1,56 @@
+- content_for(:title, 'Home')
+%div.center
+%div.hero-unit
+	%h1 Hotels
+	%h2 Find your hotels or add it.
+
+	- if user_signed_in? 
+		%span Здравствуйте,
+		= current_user.email 
+		= link_to 'Выйти', destroy_user_session_path, :method => :delete , class: "btn btn-large btn-primary"
+	- else 
+		-if admin_signed_in?
+			%span Здравствуйте,
+			= current_admin.email 
+			= link_to 'Выйти', destroy_admin_session_path, :method => :delete , class: "btn btn-large btn-primary"
+		-else
+			= link_to 'Sign Up', new_user_registration_path , class: "btn btn-large btn-primary"
+%h3 Top Hotels with best ratings:
+%ul.hotels
+	- @hotels.each do |hotel| 
+		%ul
+			%li 
+				=image_tag hotel.name_of_photo.url
+				%p
+				Title: 
+				= hotel.title
+			%li
+				-if hotel.status == "approved"
+					Status:
+					%span.label.label-success 
+						%p
+							Approved
+			%li 
+				Room description:
+				= hotel.room_description
+			%li 
+				Country:
+				= hotel.country
+			%li
+				State:
+				= hotel.state
+			%li
+				City:
+				=hotel.city
+			%li
+				Street:
+				=hotel.street
+			%li
+				Rating:
+				= hotel.rating
+			
+			%li= link_to 'details', hotel ,class: "btn btn-large btn-primary"
+
+ 
+
+  
