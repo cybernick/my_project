@@ -1,0 +1,50 @@
+- content_for(:title, 'List of articles')
+%h1 List of articles
+-if admin_signed_in?
+	%div.text-center		
+		=link_to "Pending", {:status => "pending"} , class: "btn btn-large btn-warning"
+		=link_to "Approved ", {:status => "approved"} , class: "btn btn-large btn-success"
+		=link_to "Rejected", {:status => "rejected"} , class: "btn btn-large btn-danger"
+%ul.articles
+	- @articles.each do |article| 
+		%ul
+			%li 
+				=image_tag article.name_of_photo.url
+				%p
+					Title: 
+					= article.title
+			%li
+				-if article.status == "approved"
+					Status:
+					%span.label.label-success 
+						%p
+							Approved
+				-else
+					-if article.status == "pending"
+						Status:
+						%span.label.label-warning
+							%p
+								Pending
+					-else 
+						Status:
+						%span.label.label-important
+							%p
+								Rejected
+			%li
+				%p
+					Rating:
+					= article.rating
+			%li 
+				%p
+					Article description:
+					= article.article_description
+			%li
+				= link_to 'details', article,class: "btn btn-large btn-primary"
+				- if current_user!=nil
+					- if current_user.id==article.user_id
+						= link_to 'delete', article, method: :delete,  data: { confirm: "You sure?" },title: article.title,class: "btn btn-large btn-danger"
+-if !@articles.empty?		
+	= will_paginate	@articles
+%p				
+	%div.text-center
+		= link_to 'Add article', articles_new_path , class: "btn btn-large btn-primary"

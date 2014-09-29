@@ -1,4 +1,4 @@
-<%= simple_form_for @hotel do |f| %>
+<%= simple_form_for @article do |f| %>
   <%= f.input :title,:autofocus => true %>
   <%= f.label :breakfast ,:autofocus => true %>
   <%= f.input_field :breakfast, as: :boolean ,:autofocus => true %>
@@ -10,6 +10,6 @@
   <%= f.input :street,:autofocus => true %>
   <%= f.file_field :name_of_photo %>
   <div class ="text-center" %>
-    <br><%= f.button :submit, 'Create Hotel', class: "btn btn-large btn-primary" %></br>
+    <br><%= f.button :submit, 'Create article', class: "btn btn-large btn-primary" %></br>
   </div>
 <% end %>

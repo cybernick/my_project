@@ -1,7 +1,7 @@
 require 'carrierwave/orm/activerecord'
-class Hotel < ActiveRecord::Base
+class Article < ActiveRecord::Base
   include AASM
-  attr_accessible :status,:title,:rating,:breakfast,:price_for_room,:country,:state,:city,:street, :room_description, :name_of_photo, :id
+  attr_accessible :status,:title,:rating, :article_description, :name_of_photo, :id
   belongs_to :user
   belongs_to :admin
   has_many :ratings
@@ -9,12 +9,7 @@ class Hotel < ActiveRecord::Base
   mount_uploader :name_of_photo, PhotosUploader
   validates :title, presence: true, length: { maximum: 140 }
   validates :user_id, presence: true
-  validates :room_description, presence: true
-  validates :price_for_room, presence: true,  numericality: true
-  validates :country, presence: true
-  validates :state, presence: true
-  validates :city, presence: true
-  validates :street, presence: true
+  validates :article_description, presence: true
   scope :status, -> (status) { where status: status }
   def average_rating
     @value = 0

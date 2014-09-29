@@ -1,7 +1,7 @@
-- content_for(:title, @hotel.title)
-%ul.hotels
+- content_for(:title, @article.title)
+%ul.articles
   %ul
-    =render @hotel
+    =render @article
     %li
       - content_for(:scripts) do
         = javascript_include_tag 'rating_ballot'
@@ -18,22 +18,22 @@
           = f.label("value_5", content_tag(:span, '5'), {:class=>"rating", :id=>"5"})
           = radio_button_tag("rating[value]", 5, current_user_rating == 5, :class => 'rating_button')
 
-          = hidden_field_tag("hotel_id", @hotel.id)
+          = hidden_field_tag("article_id", @article.id)
           = f.submit :submit , :class => 'rating_submit'
         %li
           -if !(rating_ballot.value == nil)
             %br Send your comment:
             = form_for(rating_ballot) do |f|
               = f.text_field :comment
-              = hidden_field_tag("hotel_id", @hotel.id)
+              = hidden_field_tag("article_id", @article.id)
               = f.submit :submit!  ,class: "btn btn-large btn-primary"
     %li
-      -if @hotel.pending? && admin_signed_in?
-        = form_for(@hotel) do |f|
+      -if @article.pending? && admin_signed_in?
+        = form_for(@article) do |f|
           = f.select(:status, [['Approved',"approved"],['Rejected',"rejected"]])
           = f.submit :submit  ,class: "btn btn-large btn-primary"
     %h1 Comments
-    -@hotel.ratings.each do |rating|  
+    -@article.ratings.each do |rating|  
       -if rating.comment==nil
       -else
         %li 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140914081709) do
+ActiveRecord::Schema.define(version: 20140913131421) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -31,29 +31,20 @@ ActiveRecord::Schema.define(version: 20140914081709) do
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
 
-  create_table "hotels", force: true do |t|
+  create_table "articles", force: true do |t|
     t.string   "title"
-    t.string   "string"
     t.float    "rating"
-    t.boolean  "breakfast"
-    t.text     "room_description"
-    t.float    "price_for_room"
+    t.text     "article_description"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name_of_photo"
-    t.string   "country"
-    t.string   "state"
-    t.string   "city"
-    t.string   "street"
-    t.string   "status",           default: "pending"
-    t.string   "admin_id"
-    t.string   "integer"
+    t.string   "status",              default: "pending"
   end
 
   create_table "ratings", force: true do |t|
     t.string   "user_id"
-    t.string   "hotel_id"
+    t.string   "article_id"
     t.integer  "value"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -73,7 +64,7 @@ ActiveRecord::Schema.define(version: 20140914081709) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "number_of_hotel"
+    t.integer  "number_of_article"
     t.integer  "number_of_comment"
     t.string   "username"
   end

@@ -4,7 +4,7 @@ class Admin::UsersController < Admin::AdminController!!!
   def index
     @user=User.all
     @user.each do |user|
-      user.number_of_hotel = user.hotels.size
+      user.number_of_article = user.articles.size
       user.number_of_comment = user.ratings.size
       user.save
     end

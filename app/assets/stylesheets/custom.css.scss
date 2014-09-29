@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 30px;
 }
 
 
@@ -32,7 +32,7 @@ form.rating_ballot{
     display: none; 
     }
  }
- form.rating_ballot label.rating { cursor: pointer; display: block; height: 20px; width: 20px; float: left; }
+form.rating_ballot label.rating { cursor: pointer; display: block; height: 20px; width: 20px; float: left; }
 form.rating_ballot label.rating span { display: none; }
 form.rating_ballot label.rating { background-image: url(../images/star-dim.png); }
 form.rating_ballot label.rating.bright { background-image: url(../images/star-bright.png); }
@@ -50,10 +50,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 0.5em;
   letter-spacing: -2px;
   margin-bottom: 30px;
-  text-align: center;
+  text-align: left;
 }
 
 h2 {
@@ -190,7 +190,7 @@ input {
 
 /* Users index */
 
-.hotels {
+.articles {
   list-style: none;
   margin: 0;
   li {

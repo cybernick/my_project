@@ -6,8 +6,8 @@ MyProject::Application.routes.draw do
   devise_for :users
   get "persons/profile"
   resources :ratings
-  resources :hotels
-  get "hotels/new"
+  resources :articles
+  get "articles/new"
   get 'persons/profile', as: 'user_root'
   root  'pages#home'
   match '/help',    to: 'pages#help',    via: 'get'

@@ -1,0 +1,29 @@
+%h1= @article.title
+= image_tag(@article.name_of_photo.url, :height => '259', :width => '194', class: 'img')
+%li
+	-if article.status == "approved"
+		Status:
+		%span.label.label-success 
+			%p
+				Approved
+	-else
+		-if article.status == "pending"
+			Status:
+			%span.label.label-warning
+				%p
+					Pending
+		-else 
+			Status:
+			%span.label.label-important
+				%p
+					Rejected
+%li 
+	%p
+		Article description:
+		= @article.article_description
+%li
+	%table#rating
+	%thead
+		%tr
+			%td Average Rating
+			%td= @article.rating

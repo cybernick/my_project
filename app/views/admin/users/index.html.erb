@@ -15,7 +15,7 @@
   <tr>
     <th><%= sortable "id" %></th>
     <th><%= sortable "username" %></th>
-    <th><%= sortable "number_of_hotel" %></th>
+    <th><%= sortable "number_of_article" %></th>
     <th><%= sortable "number_of_comment" %></th>
     <th><%= sortable "email" %></th>
     <th><%= sortable "created_at" %></th>
@@ -27,7 +27,7 @@
    <tr>
     <td><%= user.id %></td>
     <td><%= user.username %></td>
-    <td><%= user.number_of_hotel %></td>
+    <td><%= user.number_of_article %></td>
     <td><%= user.number_of_comment %></td>
     <td><%= link_to user.email, admin_user_path(user) %></td>
     <td><%= user.created_at %></td>

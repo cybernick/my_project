@@ -2,7 +2,7 @@ namespace :db do
   desc "Fill database with data"
   task populate: :environment do
     make_users
-    make_hotels
+    make_articles
     make_ratings
     make_admin
   end
@@ -27,35 +27,27 @@ def make_users
   end
 end
 
-def make_hotels
+def make_articles
   users = User.all
   users.each { |user| 
     title = Faker::Company.name
-    breakfast = [true, false].sample
-    price_for_room = rand(1000) / (rand(100) + 1) 
-    country = Faker::Address.country 
-    state = Faker::Address.state
-    city = Faker::Address.city
-    street = Faker::Address.street_name
-    room_description = Faker::Lorem.paragraph
+    article_description = Faker::Lorem.paragraph
     name_of_photo = File.open(File.join(Rails.root,"app/uploaders/#{user.id}.jpeg"))
-    user.hotels.create!(title: title, breakfast: breakfast, price_for_room: price_for_room, 
-                        country: country,state: state,city: city,street: street, 
-                        room_description: room_description, name_of_photo: name_of_photo) 
+    user.articles.create!(title: title, article_description: article_description, name_of_photo: name_of_photo) 
   }
 end
 
 def make_ratings
   users = User.all
-  hotels = Hotel.all
+  articles = Article.all
   ratings = Rating.all
-  hotels.each {|hotel|
+  articles.each {|article|
     users.each {|user|
       value=rand(5)
       comment = Faker::Lorem.sentence
-      if (user.id==hotel.user_id)
+      if (user.id==article.user_id)
       else
-        ratings.create!(user_id: user.id, hotel_id: hotel.id, value: value, comment: comment)
+        ratings.create!(user_id: user.id, article_id: article.id, value: value, comment: comment)
       end
     }
   }
