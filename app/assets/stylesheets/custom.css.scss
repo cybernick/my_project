@@ -45,24 +45,31 @@ form.rating_ballot label.rating.glow { background-image: url(../images/star-glow
 }
 /* typography */
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h4, h5, h6 {
   line-height: 1;
 }
 
+h3 {
+  text-align: center;
+  margin: 30px;
+}
+
 h1 {
-  font-size: 0.5em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: left;
+  font-size: 2.5em;
+  letter-spacing: 0.5px;
+  margin: 60px;
+  text-align: center;
 }
 
 h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  margin-top: 40px;
   text-align: center;
   font-weight: normal;
   color: $grayLight;
+  text-align: left;
 }
 
 p {
