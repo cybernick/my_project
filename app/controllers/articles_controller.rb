@@ -38,7 +38,7 @@ class ArticlesController < InheritedResources::Base
             @article.reject!
           end
         end
-        UserMailer.change_status(User.find(@article.user_id),@article.status).deliver
+        #UserMailer.change_status(User.find(@article.user_id),@article.status).deliver
         format.html { redirect_to articles_path, :notice => 'Article was successfully updated.' }
       else
         format.html { redirect_to articles_path, :notice => 'Article was not successfully updated.' }
