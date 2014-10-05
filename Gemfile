@@ -20,7 +20,7 @@ gem 'haml-rails'
 gem 'launchy'
 gem 'warden'
 gem 'aasm'
-gem 'inherited_resources'
+
 
 
 group :development, :test do
@@ -66,4 +66,5 @@ end
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
+  gem 'inherited_resources'
 end
