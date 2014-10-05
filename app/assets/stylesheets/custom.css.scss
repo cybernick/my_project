@@ -204,6 +204,12 @@ input {
     overflow: auto;
     padding: 10px 0;
     border-top: 1px solid $grayLighter;
+    h4 {
+          font-size: 1.5em;
+          letter-spacing: 0.5px;
+          margin: 30px;
+          text-align: center;
+        }
     &:last-child {
       border-bottom: 3px solid $grayLighter;
     }
@@ -238,4 +244,16 @@ input {
   .gravatar {
     margin: 1px 1px;
   }
+}
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
+  margin-right: 10px
+}
+img{
+    display: block;
+margin-left: auto;
+margin-right: auto 
 }

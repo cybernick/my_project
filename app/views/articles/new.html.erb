@@ -1,13 +1,6 @@
 <%= simple_form_for @article do |f| %>
   <%= f.input :title,:autofocus => true %>
-  <%= f.label :breakfast ,:autofocus => true %>
-  <%= f.input_field :breakfast, as: :boolean ,:autofocus => true %>
-  <%= f.input :room_description ,:autofocus => true %>
-  <%= f.input :price_for_room ,:autofocus => true %>
-  <%= f.input :country,:autofocus => true %>
-  <%= f.input :state,:autofocus => true  %>
-  <%= f.input :city,:autofocus => true %>
-  <%= f.input :street,:autofocus => true %>
+  <%= f.input :article_description ,:autofocus => true %>
   <%= f.file_field :name_of_photo %>
   <div class ="text-center" %>
     <br><%= f.button :submit, 'Create article', class: "btn btn-large btn-primary" %></br>
