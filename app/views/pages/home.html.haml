@@ -13,7 +13,7 @@
 			= current_admin.email 
 			= link_to 'Выйти', destroy_admin_session_path, :method => :delete , class: "btn btn-large btn-primary"
 		-else
-			= link_to 'Sign Up', new_user_registration_path , class: "btn btn-large btn-primary"
+			= link_to 'Зарегестрироваться', new_user_registration_path , class: "btn btn-large btn-primary"
 %h3 Пять лучших записей
 %ul.articles
 	- @articles.each do |article| 
@@ -21,15 +21,15 @@
 			%li 
 				=image_tag article.name_of_photo.url
 				%p
-				Title: 
+				Название: 
 				= article.title
 			%li 
 				= article.article_description
 			%li
-				Rating:
+				Рейтинг:
 				= article.rating
 			
-			%li= link_to 'details', article ,class: "btn btn-large btn-primary"
+			%li= link_to 'Детали', article ,class: "btn btn-large btn-primary"
 
  
 

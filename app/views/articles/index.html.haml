@@ -1,10 +1,10 @@
-- content_for(:title, 'List of articles')
-%h1 List of articles
+- content_for(:title, 'Новости')
+%h1 Новости
 -if admin_signed_in?
 	%div.text-center		
-		=link_to "Pending", {:status => "pending"} , class: "btn btn-large btn-warning"
-		=link_to "Approved ", {:status => "approved"} , class: "btn btn-large btn-success"
-		=link_to "Rejected", {:status => "rejected"} , class: "btn btn-large btn-danger"
+		=link_to "Не подтвержденые", {:status => "pending"} , class: "btn btn-large btn-warning"
+		=link_to "Подтвержденные", {:status => "approved"} , class: "btn btn-large btn-success"
+		=link_to "Откланенные", {:status => "rejected"} , class: "btn btn-large btn-danger"
 %ul.articles
 	- @articles.each do |article| 
 		%ul
@@ -17,31 +17,31 @@
 			-if admin_signed_in?		
 				%li
 					-if article.status == "approved"
-						Status:
+						Статус:
 						%span.label.label-success 
 							%p
-								Approved
+								Подтвержденные
 					-else
 						-if article.status == "pending"
-							Status:
+							Статус:
 							%span.label.label-warning
 								%p
-									Pending
+									Не подтвержденые
 						-else 
-							Status:
+							Статус:
 							%span.label.label-important
 								%p
-									Rejected
+									Откланенные
 			%li
 				%p
-					Rating:
+					Рейтинг:
 					= article.rating
 			%li 
 				%p
 					= article.article_description
 			%li
-				%div.pull-right
-					= link_to 'details', article,class: "btn btn-large btn-primary"
+				%div.pull-left
+					= link_to 'Детали', article,class: "btn btn-large btn-primary"
 				- if current_user!=nil
 					- if current_user.id==article.user_id
 						= link_to 'delete', article, method: :delete,  data: { confirm: "You sure?" },title: article.title,class: "btn btn-large btn-danger"
@@ -49,4 +49,4 @@
 	= will_paginate	@articles
 %p				
 	%div.text-center
-		= link_to 'Add article', articles_new_path , class: "btn btn-large btn-primary"
+		= link_to 'Добавить новость', articles_new_path , class: "btn btn-large btn-primary"

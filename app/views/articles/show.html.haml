@@ -27,12 +27,12 @@
               = f.text_field :comment
               = hidden_field_tag("article_id", @article.id)
               = f.submit :submit!  ,class: "btn btn-large btn-primary"
-    %li
       -if @article.pending? && admin_signed_in?
-        = form_for(@article) do |f|
-          = f.select(:status, [['Approved',"approved"],['Rejected',"rejected"]])
-          = f.submit :submit  ,class: "btn btn-large btn-primary"
-    %h1 Comments
+        %li
+          = form_for(@article) do |f|
+            = f.select(:status, [['Approved',"approved"],['Rejected',"rejected"]])
+            = f.submit :submit  ,class: "btn btn-large btn-primary"
+    %h1 Комментарии
     -@article.ratings.each do |rating|  
       -if rating.comment==nil
       -else
