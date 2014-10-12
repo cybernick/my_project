@@ -68,15 +68,8 @@ h2 {
   margin-top: 40px;
   text-align: center;
   font-weight: normal;
-  color: $grayLight;
   text-align: left;
 }
-
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
-}
-
 
 /* header */
 
@@ -250,7 +243,7 @@ input {
 }
 .pull-right {
   float: right !important;
-  margin-right: 10px
+  margin-right: 110px
 }
 img{
     display: block;
@@ -258,4 +251,20 @@ margin-left: auto;
 margin-right: auto;
 margin-top: auto;
 margin-bottom: auto;
+}
+.hero-unit {
+    padding: 60px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    color: inherit;
+    background-color: rgb(238, 238, 238);
+    border-radius: 6px 6px 6px 6px;
+    h5 {
+      font-size: 1.7em;
+      letter-spacing: 0.5px;
+      margin: 60px;
+      text-align: center;
+    }
 }
