@@ -1,7 +1,8 @@
 <%= content_for(:title, @user.username) %>
-<label class="label"><%= t("activerecord.attributes.user.username", :default => t("activerecord.labels.username", :default => "Username")) %>:</label>
-<p><%= @user.username %></p>
-
+<p>
+	<label class="label"><%= t("activerecord.attributes.user.username", :default => t("activerecord.labels.username", :default => "Username")) %>:</label>
+	<p><%= @user.username %></p>
+</p>
 <label class="label"><%= t("activerecord.attributes.user.email", :default => t("activerecord.labels.email", :default => "Email")) %>:</label>
 <p><%= @user.email %></p>
 
