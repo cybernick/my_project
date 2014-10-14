@@ -9,7 +9,7 @@ namespace :db do
 end
 
 def make_admin
-    email = "admin@hotels.org" 
+    email = "admin@pm.org" 
     password  = "password"
     Admin.create!(email:    email,
                  password: password,
@@ -19,7 +19,7 @@ end
 def make_users
   10.times do |n|
     username = "user-#{n+1}"
-    email = "user-#{n+1}@hotels.org" 
+    email = "user-#{n+1}@pm.org" 
     password  = "password"
     User.create!(username: username,email:    email,
                  password: password,

@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "admin@hotels.org"
+  default from: "admin@pm.org"
 
   def change_status(user,status)
   	@status= status
