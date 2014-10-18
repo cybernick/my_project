@@ -23,6 +23,12 @@ gem 'aasm'
 gem 'inherited_resources'
 
 
+group :assets do
+  gem "therubyracer"
+  gem "less-rails"
+  gem "twitter-bootstrap-rails"
+end
+
 group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.14.1'

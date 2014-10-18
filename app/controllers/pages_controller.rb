@@ -15,4 +15,7 @@ class PagesController < InheritedResources::Base
   def about
   end
 
+  def discipline
+  end
+
 end
