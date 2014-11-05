@@ -54,7 +54,7 @@
 			<a class="btn btn-primary btn-large" href="#">Добавить новость</a>
 		</div>
 	</div>
-	<div class="row clearfix">
+	<div class="row clearfix footer">
 		<div class="col-md-12 column">
 			<%- if !@articles.empty? -%>
 				<%= will_paginate @articles, renderer: BootstrapPagination::Rails -%>

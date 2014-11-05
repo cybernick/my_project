@@ -1,6 +1,6 @@
 class PagesController < InheritedResources::Base
 
-  before_filter :authenticate_user!, except: [:home, :contact, :about, :list, :help]	
+  before_filter :authenticate_user!, except: [:home, :contact, :about, :list, :help, :discipline]	
   def home
     @articles = Article.status("approved").order("rating DESC").limit(5)
     @articles.each {|article| article.average_rating}

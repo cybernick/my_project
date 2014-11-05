@@ -1,20 +1,74 @@
 !!!
-%html
-	%head
-		= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true 
-		= javascript_include_tag "application", "data-turbolinks-track" => true 
-		= csrf_meta_tags 
-		= render 'layouts/shim'
-	%body
-		= render 'layouts/header'
-		= yield
-		= javascript_include_tag 'jquery', 'jquery-ui', 'rails', 'application'
-		= yield :scripts
-		%div.container
-			-flash.each do |key, value| 
-				%div.alert.alert- 
-					= key 
-					= value 
-			
-		= render 'layouts/footer'
+%html{:lang => "en"}
+  %head
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true 
+    = javascript_include_tag "application", "data-turbolinks-track" => true 
+    = csrf_meta_tags 
+    = render 'layouts/shim'
+    %meta{:charset => "utf-8"}
+      %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+        %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+          %meta{:content => "", :name => "description"}
+            %meta{:content => "", :name => "author"}
+              %title Simple Sidebar - Start Bootstrap Template
+              / Bootstrap Core CSS
+              %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}
+                / Custom CSS
+                %link{:href => "css/simple-sidebar.css", :rel => "stylesheet"}
+                  / HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+                  / WARNING: Respond.js doesn't work if you view the page via file://
+                  /[if lt IE 9]
+                    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+                    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  %body
+    
+    #wrapper
+      / Sidebar
+      #sidebar-wrapper
+        %ul.sidebar-nav
+          %li.sidebar-brand
+            %a{:href => "/"}
+              Главная
+          %li
+            %a{:href => "/discipline"} Дисциплины
+          %li
+            %a{:href => "#"} Shortcuts
+          %li
+            %a{:href => "#"} Overview
+          %li
+            %a{:href => "#"} Events
+          %li
+            %a{:href => "#"} About
+          %li
+            %a{:href => "#"} Services
+          %li
+            %a{:href => "#"} Contact
+      / /#sidebar-wrapper
+      / Page Content
+      #page-content-wrapper
+        .container-fluid
+          .row
+            .col-lg-12
+              = render 'layouts/header'
+              = yield
+              = javascript_include_tag 'jquery', 'jquery-ui', 'rails', 'application'
+              = yield :scripts
+              %div.container
+                -flash.each do |key, value| 
+                  %div.alert.alert- 
+                    = key 
+                    = value 
+              = render 'layouts/footer'
+      / /#page-content-wrapper
+    / /#wrapper
+    / jQuery
+    %script{:src => "js/jquery.js"}
+    / Bootstrap Core JavaScript
+    %script{:src => "js/bootstrap.min.js"}
+    / Menu Toggle Script
+    :javascript
+      $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#wrapper").toggleClass("toggled");
+      });
 		 
