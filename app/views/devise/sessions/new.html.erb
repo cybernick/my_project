@@ -1,18 +1,28 @@
-<% provide(:title, 'Sign in') %>
-<h1>Sign in</h1>
-<div class="row">
-	<div class="span6 offset3">
-		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => "form-signin"} ) do |f| %>
-  			<%= f.email_field :email, class: 'form-control', autofocus: true, placeholder: 'Email' %></br>
+<% provide(:title, 'Вход') %>
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+      <div class="row clearfix">
+        <div class="col-md-4 column">
+        </div>
+        <div class="col-md-4 column">
+          <h1>Войти</h1>
+          <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => "form-signin"} ) do |f| %>
+            <%= f.email_field :email, class: 'form-control', autofocus: true, placeholder: 'Email' %></br>
 
-  			<%= f.password_field :password,  class: 'form-control', autofocus: true, placeholder: 'Password'%></br>
+            <%= f.password_field :password,  class: 'form-control', autofocus: true, placeholder: 'Password'%></br>
 
-  			<% if devise_mapping.rememberable? -%>
-    			<div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  			<% end -%>
+            <% if devise_mapping.rememberable? -%>
+              <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+            <% end -%>
 
-  			<div><%= f.submit "Sign ins" ,class: "btn btn-large btn-primary" %></div>
-		<% end %>
-	</div>
+            <div><%= f.submit "Войти" ,class: "btn btn-large btn-primary" %></div>
+            <%= render "devise/shared/links" %>
+          <% end %>
+        </div>
+        <div class="col-md-4 column">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<%= render "devise/shared/links" %>

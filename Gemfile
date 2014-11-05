@@ -24,7 +24,7 @@ gem 'inherited_resources'
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
-
+gem 'will_paginate-bootstrap'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
