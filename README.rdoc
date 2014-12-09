@@ -1,28 +1,25 @@
-== README
+ПОСЕЩЕНИЕ ПОЛЬЗОВАТЕЛЯ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Внизу главной страницы есть кнопка зарегестрироваться, она перенаправит сюда:
+http://vmk-msu-sev.herokuapp.com/users/sign_up
+После регистрации происходит автоматический вход в сайт
 
-Things you may want to cover:
+Можете зайти например на вкладку новости:
+http://vmk-msu-sev.herokuapp.com/articles
+Потом детали:
+http://vmk-msu-sev.herokuapp.com/articles/2
+Поставить там рейтинг статье и оставить комментарий.
 
-* Ruby version
+Так же можно добавить новость в низу кнопка на вкладке новости:
+http://vmk-msu-sev.herokuapp.com/articles/new
 
-* System dependencies
+ПОСЕЩЕНИЕ АДМИНИСТРАТОРА
+Перейдите по ссылке:
+http://vmk-msu-sev.herokuapp.com/admin
+Логин: admin@pm.org Пароль: password
 
-* Configuration
+Перейдите на вкладку новости там будет три кнопки на верху, это сортировка по статусу, админ может менять статусы новостей.
 
-* Database creation
+Для этого заходим на любую новость(кнопка Детали) и там меняем статус.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Так же есть раздел Users для работы с пользователями.
